@@ -453,7 +453,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_introduction">3. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_uses">3.1. Uses</a></li>
+<li><a href="#_loc_i_project">3.1. Loc-I Project</a></li>
+<li><a href="#_loc_i_technical_implementation">3.2. Loc-I Technical Implementation</a></li>
+<li><a href="#_supermodel_specification_role">3.3. Supermodel Specification role</a></li>
 </ul>
 </li>
 <li><a href="#_model">4. Model</a>
@@ -715,12 +717,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_introduction">3. Introduction</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_loc_i_project">3.1. Loc-I Project</h3>
 <div class="paragraph">
-<p><em>coming</em></p>
+<p>The Location Index (LOC-I) project, established in 2018, created a framework to provide a consistent way to seamlessly integrate spatial data from distributed sources. The target was Australian spatial data "of national significance", meaning most - initially all - of the data considered was Australian federal government data. Going forward, Loc-I is not limited to this sort of data, so other government data (states) may be included as well as non-government data.</p>
+</div>
+<div class="paragraph">
+<p>See the project website, <a href="http://www.ga.gov.au/locationindex" class="bare">http://www.ga.gov.au/locationindex</a>, for more project information.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_uses">3.1. Uses</h3>
-
+<h3 id="_loc_i_technical_implementation">3.2. Loc-I Technical Implementation</h3>
+<div class="paragraph">
+<p>The technical implementation of Loc-I was based on Semantic Web <a href="#semantic-web">[semantic-web]</a> principles allowing for datasets to be published as Linked Data <a href="#linked-data">[linked-data]</a> independently by data holders - different government departments, companies etc. - and consumed with minimal effort required for integration.</p>
+</div>
+<div class="paragraph">
+<p>The technical implementation relied on a <em>Loc-I Ontology</em>, the main Loc-I model, multiple <em>Background Models</em>, fundamental, standards, data models that the Loc-I Ontology depended on, and, for some datasets, <em>Dataset Models</em> of their content that spefialise the Loc-I Ontology.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supermodel_specification_role">3.3. Supermodel Specification role</h3>
+<div class="paragraph">
+<p>This Loc-I Supermodel Specification formally defines the technical model implementation of Loc-I including all previously created models and relations as well as new models that have been added since the original Loc-I project, for example to allow Loc-I information to be exported in forms expected by industry.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1283,7 +1302,7 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-24 00:03:12 UTC
+Last updated 2022-02-24 02:42:21 UTC
 </div>
 </div>
 </body>
