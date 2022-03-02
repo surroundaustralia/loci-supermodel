@@ -466,13 +466,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_level_3_domain_main_classes">4.4. Level 3: Domain Main Classes</a></li>
 </ul>
 </li>
-<li><a href="#_data_domain_resources">5. Data Domain Resources</a>
+<li><a href="#_data_domain_details">5. Data Domain Details</a>
 <ul class="sectlevel2">
-<li><a href="#_data_cataloguing_resources">5.1. Data Cataloguing Resources</a></li>
-<li><a href="#_organisations_people_resources">5.2. Organisations &amp; People Resources</a></li>
-<li><a href="#_sampling_resources">5.3. Sampling Resources</a></li>
-<li><a href="#_spatiality_resources">5.4. Spatiality Resources</a></li>
-<li><a href="#_theming_resources">5.5. Theming Resources</a></li>
+<li><a href="#_data_cataloguing_details">5.1. Data Cataloguing Details</a></li>
+<li><a href="#_organisations_people_details">5.2. Organisations &amp; People Details</a></li>
+<li><a href="#_sampling_details">5.3. Sampling Details</a></li>
+<li><a href="#_spatiality_details">5.4. Spatiality Details</a></li>
+<li><a href="#_theming_details">5.5. Theming Details</a></li>
 </ul>
 </li>
 <li><a href="#_references">References</a></li>
@@ -515,11 +515,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Creator</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/ga">Geoscience Australia</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/icsm">Intergovernmental Committee on Surveying &amp; Mapping</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Publisher</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/ga">Geoscience Australia</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/icsm">Intergovernmental Committee on Surveying &amp; Mapping</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>License</strong></p></td>
@@ -574,7 +574,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ex:</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://example.com/thing" class="bare">http://example.com/thing</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://example.com/" class="bare">http://example.com/</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generic examples namespace</p></td>
 </tr>
 <tr>
@@ -629,7 +629,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Central Classes are the generic data classes at the centre of Data Domains with high-level relationships between them defined in this supermodel.</p>
 </div>
 <div class="paragraph">
-<p>These classes are taken from general standards - usually well-known international stadnards - and Geoscience Australia specialises and extends them to make specific, custom, classes for their needs.</p>
+<p>These classes are taken from general standards - usually well-known international stadnards - and specialised and extended within implementation scenarios to cater for specific needs.</p>
 </div>
 </dd>
 </dl>
@@ -678,6 +678,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>&#8201;&#8212;&#8201;<a href="https://www.w3.org/standards/semanticweb/data" class="bare">https://www.w3.org/standards/semanticweb/data</a></p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="location-index" class="dlist">
+<dl>
+<dt class="hdlist1">Location Index</dt>
+<dd>
+<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/location-index" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/location-index</a></code></p>
+<div class="paragraph">
+<p>A project aiming to provide a consistent way to seamlessly integrate spatial data from distributed sources.</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;<a href="http://www.ga.gov.au/locationindex">Location Index Project Website</a></p>
 </div>
 </dd>
 </dl>
@@ -734,6 +748,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>The technical implementation relied on a <em>Loc-I Ontology</em>, the main Loc-I model, multiple <em>Background Models</em>, fundamental, standards, data models that the Loc-I Ontology depended on, and, for some datasets, <em>Dataset Models</em> of their content that spefialise the Loc-I Ontology.</p>
 </div>
+<div class="paragraph">
+<p><a href="#orig-arch">Figure 1</a> below shows the original detailed architecture diagram used to explain Loc-I&#8217;s parts from 2018 - 2021. This supermodel document does not detail the technical implementation of Loc-I elements but does provide a formal, integrated, model for all the elements in that figure. The OWL ontology elements represented on the left are all included in this supermodel unchanged, however several additional background ontologies and profiles have been added to better integrate Loc-I datasets' models. These include the <em>OGC LD API profile</em> <a href="#OGCLDAPI">[OGCLDAPI]</a> wich is used to ensure data meets, or to build out data to meet, requirements of the Open Geospatail Consortium&#8217;s <em>OGC API - Features</em> <a href="#OGCAPI">[OGCAPI]</a> which is now used as the standard API for Loc-I datasets. That standard was not available when the original Loc-I project was started in 2018.</p>
+</div>
+<div id="orig-arch" class="imageblock">
+<div class="content">
+<img src="https://surroundaustralia.github.io/loci-supermodel//img/original-loci-detailed-architecture.png" alt="Original Loc-I Detailed Architecture">
+</div>
+<div class="title">Figure 1. Original Loc-I Detailed Architecture (from <a href="https://www.csiro.au">CSIRO</a>)</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_supermodel_specification_role">3.3. Supermodel Specification role</h3>
@@ -760,7 +783,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/key.png" alt="key">
 </div>
-<div class="title">Figure 1. Diagram elements key</div>
+<div class="title">Figure 2. Diagram elements key</div>
 </div>
 </div>
 <div class="sect3">
@@ -772,7 +795,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/level0-owl.png" alt="level0 owl">
 </div>
-<div class="title">Figure 2. OWL objects and their relations</div>
+<div class="title">Figure 3. OWL objects and their relations</div>
 </div>
 <div class="paragraph">
 <p>The elements shown above are identified with prefixed IRIs that correspond to entries in the <a href="#tbl-prefixes">Namespace Table</a>. A short explanation of the diagram key elements is:</p>
@@ -812,7 +835,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/level0-prov.png" alt="level0 prov">
 </div>
-<div class="title">Figure 3. PROV main classes and main relations</div>
+<div class="title">Figure 4. PROV main classes and main relations</div>
 </div>
 <div class="paragraph">
 <p>According to PROV, all things are either a:</p>
@@ -838,7 +861,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_level_1_data_domains">4.2. Level 1: Data Domains</h3>
 <div class="paragraph">
-<p>The top-level view of the GA supermodel that assumes Level 0 background mechanics shows a set of 5 <a href="#data-domain">Data Domains</a> which are:</p>
+<p>The top-level view of the supermodel that assumes Level 0 background mechanics shows a set of 5 <a href="#data-domain">Data Domains</a> which are:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -847,9 +870,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/organisations-people:">Organisations &amp; People</a></p>
-</li>
-<li>
-<p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/sampling:">Sampling</a></p>
 </li>
 <li>
 <p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/spatiality:">Spatiality</a></p>
@@ -866,7 +886,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/data-domains.png" alt="data domains">
 </div>
-<div class="title">Figure 4. Top-level view of the GA Supermodel showing Data Domains</div>
+<div class="title">Figure 5. Top-level view of the Supermodel showing Data Domains</div>
 </div>
 <div class="paragraph">
 <p>These Data Domains are defined formally in a simple SKOS vocabulary within this model&#8217;s set of machine-readable resources. The vocabulary may be access ddirectly at <a href="http://pid.geoscience.gov.au/def/sm/data-domains" class="bare">http://pid.geoscience.gov.au/def/sm/data-domains</a>.</p>
@@ -883,18 +903,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work and thus other areas of GA&#8217;s responsibility may not be adequately provided for with the Data Domains. While these current Data Domains are at a concpetual level above particular science domains and shouldn&#8217;t be extende to cater for science areas such as Offshore Petrolium Resources or responsibility areas such as Community Safety, it may still be necissary for these domains may be added to accomodate other GA work in some way. Extensions should occur as little as possible.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_level_2_central_classes">4.3. Level 2: Central Classes</h3>
@@ -905,7 +913,7 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/central-classes.png" alt="central classes">
 </div>
-<div class="title">Figure 5. Next level view of the GA Supermodel showing Central Classes</div>
+<div class="title">Figure 6. Next level view of the Supermodel showing Central Classes</div>
 </div>
 <div class="paragraph">
 <p>The Central Classes of each of the Data Domains are well-used classes from well-known models. For example, the Central Class of <em>Organisation &amp; People</em> is <a href="#PROV">[PROV]</a>'s <code>Agent</code> class which is one of the three main classes of thing in PROV and used every time PROV is used to represent causal agents. PROV is used extensively to indicate how things - data, resources, systems - come to be.</p>
@@ -1026,10 +1034,10 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-data-cataloguing.png" alt="domain classes data cataloguing">
 </div>
-<div class="title">Figure 6. Domain Main Classes for Data Cataloguing</div>
+<div class="title">Figure 7. Domain Main Classes for Data Cataloguing</div>
 </div>
 <div class="paragraph">
-<p>This Data Domain&#8217;s main classes are essentially the DCAT2 data model <a href="#DCAT">[DCAT]</a> with a slight profiling: <code>dcterms:hasPart</code> should be used to indicate elements within catalogues (e.g. <code>dcat:Dataset</code> and other things within a <code>dcat:Catalog</code>) rather than the specialised properties of <code>dcat:dataset</code> because GA expects to catalogue many types of things and the type of the thing should be given by the thing, not the catalogue property used to indicate it.</p>
+<p>This Data Domain&#8217;s main classes are essentially the DCAT2 data model <a href="#DCAT">[DCAT]</a> with a slight profiling: <code>dcterms:hasPart</code> should be used to indicate elements within catalogues (e.g. <code>dcat:Dataset</code> and other things within a <code>dcat:Catalog</code>) rather than the specialised properties of <code>dcat:dataset</code> because generic catalogue can be expected to catalogue many types of things and the type of the thing should be given by the thing, not the catalogue property used to indicate it.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1041,54 +1049,17 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-organisations-people.png" alt="domain classes organisations people">
 </div>
-<div class="title">Figure 7. Domain Main Classes for Organisations &amp; People</div>
+<div class="title">Figure 8. Domain Main Classes for Organisations &amp; People</div>
 </div>
 <div class="paragraph">
 <p>This Data Domain&#8217;s main classes are centered on <a href="#PROV">[PROV]</a>'s <code>prof:Agent</code> class but specific types of agent - <em>person</em> &amp; <em>organisation</em> are defined using schema.org <a href="#SDO">[SDO]</a>, the general-purpose ontology provisioned by Google, Microsoft &amp; Yahoo for the description of web page data.</p>
 </div>
 <div class="paragraph">
-<p>schema.org objects and properties are also used to define agents in the VocPub profile <a href="#VOCPUB">[VOCPUB]</a> and are understood by ontology documentation tools such as pyLODE <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> which is used by GA.</p>
+<p>schema.org objects and properties are also used to define agents in the VocPub profile <a href="#VOCPUB">[VOCPUB]</a> and are understood by ontology documentation tools such as pyLODE <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_sampling">4.4.3. Sampling</h4>
-<div class="paragraph">
-<p>This subsection details the main elements of the Sampling Data Domain.</p>
-</div>
-<div id="fig-domain-classes-sampling" class="imageblock">
-<div class="content">
-<img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-sampling.png" alt="domain classes sampling">
-</div>
-<div class="title">Figure 8. Domain Main Classes for Sampling</div>
-</div>
-<div class="paragraph">
-<p>This Data Domain&#8217;s main classes are taken directly from the <em>Sensor, Observation, Sample, and Actuator Ontology</em> (SOSA) which is part of the <em>Semanic Sensor Networks Ontology</em> <a href="#SSN">[SSN]</a>.</p>
-</div>
-<div class="paragraph">
-<p>The specialised form of SOSA use seen here - SOSA is general-purpose and has many patterns of use - is informed by the TERN Ontolology <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> which is used as the doamin model of the <em>Australian Biodiversity Information Standard</em> (ABIS) <a href="#ABIS">[ABIS]</a> with which GA sampling data is intended to be compatible.</p>
-</div>
-<div class="paragraph">
-<p>In addition to samples &amp; sampling, this domain can cater for general <em>observations</em> of things, e.g., observations of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>chemicals in rock samples, determined in a lab</p>
-</li>
-<li>
-<p>images of the earth</p>
-</li>
-<li>
-<p>classification of statigraphic unit</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Where <code>sosa:Sampling</code> activities result in <code>sosa:Sample</code> objects, <code>sosa:Observation</code> activities result in <code>sosa:Result</code> objects. The observation/result pair is a more generic form of the samplling/sample pair.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_spatiality">4.4.4. Spatiality</h4>
+<h4 id="_spatiality">4.4.3. Spatiality</h4>
 <div class="paragraph">
 <p>This subsection details the main elements of the Spatiality Data Domain.</p>
 </div>
@@ -1099,14 +1070,14 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <div class="title">Figure 9. Domain Main Classes for Spatiality</div>
 </div>
 <div class="paragraph">
-<p>This Data Domain&#8217;s main classes are taken directly from GeoSPARQL 1.1 <a href="#GEO">[GEO]</a> which is used extensively in GA already. GeoSPARQL&#8217;s main purposes are to relate things (<code>geo:Feature</code>) to their spatial projections - their geometries - and to relate things to one another - topological relations between features, such as <em>within</em>, <em>touches</em>, <em>disjoint</em> etc.</p>
+<p>This Data Domain&#8217;s main classes are taken directly from GeoSPARQL 1.1 <a href="#GEO">[GEO]</a> which is used extensively for Semantic Web spatial data already. GeoSPARQL&#8217;s main purposes are to relate things (<code>geo:Feature</code>) to their spatial projections - their geometries - and to relate things to one another - topological relations between features, such as <em>within</em>, <em>touches</em>, <em>disjoint</em> etc.</p>
 </div>
 <div class="paragraph">
 <p>Particular datasets tend to implement specialised types of things (usually referred to as <em>Feature Types</em>) and sometimes specialised relations between things, e.g. special <em>hydrological catchment</em> feature type might relate to another by being <em>upstream</em> of it. This is as per modelling in the Geofabric footnot:[<a href="https://linked.data.gov.au/dataset/geofabric" class="bare">https://linked.data.gov.au/dataset/geofabric</a>].</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_theming">4.4.5. Theming</h4>
+<h4 id="_theming">4.4.4. Theming</h4>
 <div class="paragraph">
 <p>This subsection details the main elements of the Theming Data Domain.</p>
 </div>
@@ -1117,122 +1088,37 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <div class="title">Figure 10. Domain Main Classes for Theming</div>
 </div>
 <div class="paragraph">
-<p>This Data Domain&#8217;s main classes are taken from <a href="#SKOS">[SKOS]</a> and their expected/required properties and relations are formally defined in <em>VocPub</em>, a "vocabulary publication profile of SKOS" <a href="#VOCPUB">[VOCPUB]</a>. VocPub just mandates certain vocabulary metadata and relations between elements in vocabularies. Conformance of vocabularies to VocPub is also easily testable using the profile&#8217;s validator and online tooling that support it <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>.</p>
+<p>This Data Domain&#8217;s main classes are taken from <a href="#SKOS">[SKOS]</a> and their expected/required properties and relations are formally defined in <em>VocPub</em>, a "vocabulary publication profile of SKOS" <a href="#VOCPUB">[VOCPUB]</a>. VocPub just mandates certain vocabulary metadata and relations between elements in vocabularies. Conformance of vocabularies to VocPub is also easily testable using the profile&#8217;s validator and online tooling that support it <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_domain_resources">5. Data Domain Resources</h2>
+<h2 id="_data_domain_details">5. Data Domain Details</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Data Domains described above are implemented using a number of resources. The following subsections link to these resources.</p>
 </div>
 <div class="sect2">
-<h3 id="_data_cataloguing_resources">5.1. Data Cataloguing Resources</h3>
+<h3 id="_data_cataloguing_details">5.1. Data Cataloguing Details</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_organisations_people_resources">5.2. Organisations &amp; People Resources</h3>
+<h3 id="_organisations_people_details">5.2. Organisations &amp; People Details</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_sampling_resources">5.3. Sampling Resources</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><em>Semantic Sensor Networks</em> ontology</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.w3.org/TR/vocab-ssn/" class="bare">https://www.w3.org/TR/vocab-ssn/</a></p>
-</li>
-<li>
-<p>A <a href="https://www.w3.org/:">W3C</a> "recommendation" (standard) ontology, <a href="#SSN">[SSN]</a></p>
-</li>
-<li>
-<p>The Domain Main Classes for the <em>Sampling</em> domain are all SOSA Ontology classes. SOSA is a component ontology of the SSN Ontology</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>GA Samples ontology</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://surroundaustralia.github.io/loci-supermodel/ga-samples.html" class="bare">https://surroundaustralia.github.io/loci-supermodel/ga-samples.html</a></p>
-</li>
-<li>
-<p>A Semantic Web implementation of the Sampling Features Schema described in clauses 9-11 of <a href="#ISO19156">[ISO19156]</a></p>
-</li>
-<li>
-<p>This ontology directly inherits from the <em>SAM Lite ontology</em> but uses lots of <em>SOSA</em> too</p>
-</li>
-<li>
-<p>It is concerned only with characterising physical samples</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>SAM Lite ontology</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://surroundaustralia.github.io/loci-supermodel/sam-lite.html" class="bare">https://surroundaustralia.github.io/loci-supermodel/sam-lite.html</a></p>
-</li>
-<li>
-<p>A Semantic Web implementation of the Sampling Features Schema described in clauses 9-11 of <a href="#ISO19156">[ISO19156]</a></p>
-</li>
-<li>
-<p>This ontology is no longer in direct use but is the foundation for the <em>GA Samples Ontology</em></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>GA&#8217;s <em>Samples</em> API online</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://pid.geoscience.gov.au/sample/" class="bare">http://pid.geoscience.gov.au/sample/</a></p>
-</li>
-<li>
-<p>This API provides access to multiple model representations of the metadata of Geosceicne Australia&#8217;s samples dataset</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Example sample data: AU128</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/surroundaustralia/loci-supermodel/blob/main/domain-models/samples/AU128.sosa.ttl">SOSA Modelling</a></p>
-</li>
-<li>
-<p><a href="https://github.com/surroundaustralia/loci-supermodel/blob/main/domain-models/samples/AU128.sam.ttl">SAM Modelling</a></p>
-</li>
-<li>
-<p><a href="https://github.com/surroundaustralia/loci-supermodel/blob/main/domain-models/samples/AU128.prov.ttl">PROV Modelling</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_spatiality_resources">5.4. Spatiality Resources</h3>
+<h3 id="_sampling_details">5.3. Sampling Details</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_theming_resources">5.5. Theming Resources</h3>
-<div class="paragraph">
-<p>Unresolved directive in 01-supermodel.adoc - include::02-pid-policy.adoc[]</p>
+<h3 id="_spatiality_details">5.4. Spatiality Details</h3>
+
 </div>
+<div class="sect2">
+<h3 id="_theming_details">5.5. Theming Details</h3>
+
 </div>
 </div>
 </div>
@@ -1255,6 +1141,12 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 </li>
 <li>
 <p><a id="ISO19156"></a> International Organization for Standardization, <em>ISO 19156: Geographic information — Observations and measurements</em> (2011)</p>
+</li>
+<li>
+<p><a id="OGCAPI"></a> Open Geospatial Consortium, _OGC API - Features, overview website (2022). OGC Implementation Specification. <a href="https://ogcapi.ogc.org/features/" class="bare">https://ogcapi.ogc.org/features/</a>. Accessed 2022-03-03</p>
+</li>
+<li>
+<p><a id="OGCLDAPI"></a> SURROUND Australia Pty Ltd, <em>OGC LDA PI Profile</em>, Profiles Vocabulary Profile (2021). <a href="https://w3id.org/profile/ogcldapi" class="bare">https://w3id.org/profile/ogcldapi</a></p>
 </li>
 <li>
 <p><a id="OWL"></a> World Wide Web Consortium, <em>OWL 2 Web Ontology Language Document Overview (Second Edition)</em>, W3C Recommendation (11 December 2012). <a href="https://www.w3.org/TR/owl2-overview/" class="bare">https://www.w3.org/TR/owl2-overview/</a></p>
@@ -1294,15 +1186,12 @@ This supermodel&#8217;s origins are in GA&#8217;s geology and spatial data work 
 <a href="#_footnoteref_2">2</a>. <a href="https://pypi.org/project/pyLODE/" class="bare">https://pypi.org/project/pyLODE/</a>
 </div>
 <div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. <a href="https://linkeddata.tern.org.au/tern-ontology" class="bare">https://linkeddata.tern.org.au/tern-ontology</a>
-</div>
-<div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. The validator itself is online at <a href="https://w3id.org/profile/vocpub/validator" class="bare">https://w3id.org/profile/vocpub/validator</a> and is pre-loaded into GA&#8217;s vocabulary servers e.g. <a href="https://vocabs.ga.gov.au" class="bare">https://vocabs.ga.gov.au</a>. It can also be selected for online validation use at <a href="https://rdftools.surroundaustralia.com" class="bare">https://rdftools.surroundaustralia.com</a>
+<a href="#_footnoteref_3">3</a>. The validator itself is online at <a href="https://w3id.org/profile/vocpub/validator" class="bare">https://w3id.org/profile/vocpub/validator</a> and is pre-loaded into several online validation tools, for example Geoscience Australia&#8217;s vocabulary servers e.g. <a href="https://vocabs.ga.gov.au" class="bare">https://vocabs.ga.gov.au</a>. It can also be selected for online validation use at <a href="https://rdftools.surroundaustralia.com" class="bare">https://rdftools.surroundaustralia.com</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-24 02:42:21 UTC
+Last updated 2022-03-02 23:55:53 UTC
 </div>
 </div>
 </body>
