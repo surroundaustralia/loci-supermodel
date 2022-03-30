@@ -1,3 +1,5 @@
+**ARCHIVED** See https://github.com/geoscienceaustralia/loci-supermodel
+
 = Loc-I Supermodel
 
 WARNING: in early development, not officially released yet
