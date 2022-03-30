@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Loc-I Supermodel</title>
+<title>Loc-I Supermodel Specification</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Loc-I Supermodel</h1>
+<h1>Loc-I Supermodel Specification</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -468,11 +468,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_data_domain_details">5. Data Domain Details</a>
 <ul class="sectlevel2">
-<li><a href="#_data_cataloguing_details">5.1. Data Cataloguing Details</a></li>
-<li><a href="#_organisations_people_details">5.2. Organisations &amp; People Details</a></li>
-<li><a href="#_sampling_details">5.3. Sampling Details</a></li>
-<li><a href="#_spatiality_details">5.4. Spatiality Details</a></li>
-<li><a href="#_theming_details">5.5. Theming Details</a></li>
+<li><a href="#_data_cataloguing_domain">5.1. Data Cataloguing Domain</a></li>
+<li><a href="#_organisations_people_domain">5.2. Organisations &amp; People Domain</a></li>
+<li><a href="#_theming_domain">5.3. Theming Domain</a></li>
+<li><a href="#_sampling_observations_domain">5.4. Sampling &amp; Observations Domain</a></li>
+<li><a href="#_spatiality_domain">5.5. Spatiality Domain</a></li>
 </ul>
 </li>
 <li><a href="#_references">References</a></li>
@@ -499,7 +499,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This Model - the Loc-I Supermodel - is the <a href="http://www.ga.gov.au/locationindex">Location Index (Loc-I) Projects</a>'s overarching data model that provides integration logic for all Loc-I elements.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This Model - the Loc-I Supermodel - is the <a href="http://www.ga.gov.au/locationindex">Location Index (Loc-I) Projects</a>'s overarching data model that provides integration logic for all Loc-I elements. It is based on the general-purpose <a href="https://linked.data.gov.au/def/supermodel">Supermodel Model</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Created</strong></p></td>
@@ -507,7 +507,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modified</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022-02-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2022-03-30</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issued</strong></p></td>
@@ -515,7 +515,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Creator</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/icsm">Intergovernmental Committee on Surveying &amp; Mapping</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/ga">Geoscience Australia</a> &amp; <a href="https://surroundaustralia.com">SURROUND Austraia Pty Ltd</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Publisher</strong></p></td>
@@ -539,20 +539,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_abstract">2.1. Abstract</h3>
 <div class="paragraph">
-<p>This Model - the Loc-I Supermodel - is the <a href="http://www.ga.gov.au/locationindex">Location Index (Loc-I) Projects</a>'s overarching data model that provides integration logic for all Loc-I elements.</p>
+<p>This Model - the Loc-I Supermodel - is the <a href="http://www.ga.gov.au/locationindex">Location Index (Loc-I) Project</a>'s overarching data model that provides integration logic for all Loc-I elements. It is based on the general-purpose <a href="https://linked.data.gov.au/def/supermodel">Supermodel Model</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_namespaces">2.2. Namespaces</h3>
 <div class="paragraph">
-<p>This model is built on a "baseline" of Semantic Web models which use a variatey of namespaces. Prefixes for thess namespaces, used througout this document, are listed below.</p>
+<p>This model is built on a "baseline" of Semantic Web models which use a variatey of namespaces. Prefixes for these namespaces, used througout this document, are listed below.</p>
 </div>
-<table id="tbl-prefixes" class="tableblock frame-none grid-none stripes-even" style="width: 75%;">
+<table id="tbl-prefixes" class="tableblock frame-none grid-none stripes-even stretch">
 <caption class="title">Table 1. Namespaces</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 11.1111%;">
+<col style="width: 44.4444%;">
+<col style="width: 44.4445%;">
 </colgroup>
 <thead>
 <tr>
@@ -563,9 +563,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>super</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code><a href="https://linked.data.gov.au/def/loci-supermodel/" class="bare">https://linked.data.gov.au/def/loci-supermodel/</a></code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>this model</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>super:</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code><a href="https://linked.data.gov.au/def/supermodel/" class="bare">https://linked.data.gov.au/def/supermodel/</a></code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>the Supermodel meta-model</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>dcterms:</code></p></td>
@@ -578,6 +578,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generic examples namespace</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loci:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://linked.data.gov.au/def/loci" class="bare">https://linked.data.gov.au/def/loci</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocI Ontology - original LocI Project 2018 ontology</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>owl:</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.w3.org/2002/07/owl#" class="bare">http://www.w3.org/2002/07/owl#</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Web Ontology Language ontology namespace</p></td>
@@ -586,6 +591,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>rdfs:</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.w3.org/2000/01/rdf-schema#" class="bare">http://www.w3.org/2000/01/rdf-schema#</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RDF Schema ontology namespace</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>smtd:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://linked.data.gov.au/def/supermodel-td/" class="bare">https://linked.data.gov.au/def/supermodel-td/</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supermodel Terms &amp; Definitions Vocabulary</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sosa:</code></p></td>
@@ -620,16 +630,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>The following terms appear in this document and, when they do, the definitions in this section apply to them.</p>
 </div>
+<div class="paragraph">
+<p>These terms are presented as a formal Semantic Web vocabulary at</p>
+</div>
 <div id="central-class" class="dlist">
 <dl>
 <dt class="hdlist1">Central Class</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/central-class" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/central-class</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/central-class">smtd:central-class</a></code></p>
 <div class="paragraph">
 <p>Central Classes are the generic data classes at the centre of Data Domains with high-level relationships between them defined in this supermodel.</p>
 </div>
 <div class="paragraph">
-<p>These classes are taken from general standards - usually well-known international stadnards - and specialised and extended within implementation scenarios to cater for specific needs.</p>
+<p>These classes are taken from general standards - usually well-known international standards - and specialised and extended within implementation scenarios to cater for specific needs.</p>
 </div>
 </dd>
 </dl>
@@ -638,7 +651,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Data Domain</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/data-domain" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/data-domain</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/data-domain">smtd:data-domain</a></code></p>
 <div class="paragraph">
 <p>High-level conceptual areas within which Geosicence Australia has data.</p>
 </div>
@@ -655,7 +668,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Knowledge Graph</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/knowledge-graph" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/knowledge-graph</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/knowledge-graph">smtd:knowledge-graph</a></code></p>
 <div class="paragraph">
 <p>A Knowledge Graph is a dataset that uses a graph data tructure - nodes and edges - with strongly-defined elements.</p>
 </div>
@@ -666,7 +679,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Linked Data</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/linked-data" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/linked-data</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/linked-data">smtd:linked-data</a></code></p>
 <div class="paragraph">
 <p>A set of technologies and conventions defined by the <a href="https://www.w3.org">World Wide Web Consortium</a> that aim to present data in both human- and machine-readable form over the Internet.</p>
 </div>
@@ -686,7 +699,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Location Index</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/location-index" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/location-index</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/location-index">smtd:location-index</a></code></p>
 <div class="paragraph">
 <p>A project aiming to provide a consistent way to seamlessly integrate spatial data from distributed sources.</p>
 </div>
@@ -696,11 +709,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dd>
 </dl>
 </div>
+<div id="ontology" class="dlist">
+<dl>
+<dt class="hdlist1">Ontology</dt>
+<dd>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/ontology">smtd:ontology</a></code></p>
+<div class="paragraph">
+<p>In computer science and information science, an ontology encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains of discourse.</p>
+</div>
+<div class="paragraph">
+<p>The word ontology was originally defined as "the branch of philosophy that studies concepts such as existence, being, becoming, and reality". and the computer science term is derived from that definition.</p>
+</div>
+</dd>
+</dl>
+</div>
 <div id="semantic-web" class="dlist">
 <dl>
 <dt class="hdlist1">Semantic Web</dt>
 <dd>
-<p><code><a href="http://pid.geoscience.gov.au/def/sm/terms-definitions/semantic-web" class="bare">http://pid.geoscience.gov.au/def/sm/terms-definitions/semantic-web</a></code></p>
+<p><code><a href="https://linked.data.gov.au/def/supermodel-td/semantic-web">smtd:semantic-web</a></code></p>
 <div class="paragraph">
 <p>The <a href="https://www.w3.org">World Wide Web Consortium</a>'s vision of an Internet-based web of Linked Data.</p>
 </div>
@@ -734,7 +761,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_loc_i_project">3.1. Loc-I Project</h3>
 <div class="paragraph">
-<p>The Location Index (LOC-I) project, established in 2018, created a framework to provide a consistent way to seamlessly integrate spatial data from distributed sources. The target was Australian spatial data "of national significance", meaning most - initially all - of the data considered was Australian federal government data. Going forward, Loc-I is not limited to this sort of data, so other government data (states) may be included as well as non-government data.</p>
+<p>The Location Index (LOC-I) project, established in 2018, created a methodology and data models framework providing for a consistent way to seamlessly integrate spatial data from distributed sources. The target was Australian spatial data "of national significance", meaning most - initially all - of the data considered was Australian Federal government data. Going forward, Loc-I is not limited to this sort of data, so other government data (States, Local) as well as non-government data may be included.</p>
 </div>
 <div class="paragraph">
 <p>See the project website, <a href="http://www.ga.gov.au/locationindex" class="bare">http://www.ga.gov.au/locationindex</a>, for more project information.</p>
@@ -743,7 +770,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_loc_i_technical_implementation">3.2. Loc-I Technical Implementation</h3>
 <div class="paragraph">
-<p>The technical implementation of Loc-I was based on Semantic Web <a href="#semantic-web">[semantic-web]</a> principles allowing for datasets to be published as Linked Data <a href="#linked-data">[linked-data]</a> independently by data holders - different government departments, companies etc. - and consumed with minimal effort required for integration.</p>
+<p>The technical implementation of Loc-I was based on <a href="#semantic-web">Semantic Web</a> principles allowing for datasets to be published as <a href="#linked-data">Linked Data</a> independently by data holders - different government departments, companies etc. - and consumed with minimal effort required for integration.</p>
 </div>
 <div class="paragraph">
 <p>The technical implementation relied on a <em>Loc-I Ontology</em>, the main Loc-I model, multiple <em>Background Models</em>, fundamental, standards, data models that the Loc-I Ontology depended on, and, for some datasets, <em>Dataset Models</em> of their content that spefialise the Loc-I Ontology.</p>
@@ -761,7 +788,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_supermodel_specification_role">3.3. Supermodel Specification role</h3>
 <div class="paragraph">
-<p>This Loc-I Supermodel Specification formally defines the technical model implementation of Loc-I including all previously created models and relations as well as new models that have been added since the original Loc-I project, for example to allow Loc-I information to be exported in forms expected by industry.</p>
+<p>This Loc-I Supermodel Specification document formally defines the technical model implementation of Loc-I including all previously created models and relations as well as new models that have been added since the original Loc-I project, for example data models for new Loc-I datasets.</p>
 </div>
 </div>
 </div>
@@ -769,6 +796,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_model">4. Model</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The model that this Supermodel is based on is a small <a href="#semantic-web">Semantic Web</a> <a href="#ontology">Ontology</a> that defines the major model elements and other terminology used.</p>
+</div>
+<div class="paragraph">
+<p>In this Specification, this implementation of the Supermodel model is presented via a series of "Levels" which are progressively more detailed, domain-specific, views of the model.</p>
+</div>
 <div class="sect2">
 <h3 id="_level_0_model_background">4.1. Level 0: Model Background</h3>
 <div class="paragraph">
@@ -861,21 +894,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_level_1_data_domains">4.2. Level 1: Data Domains</h3>
 <div class="paragraph">
-<p>The top-level view of the supermodel that assumes Level 0 background mechanics shows a set of 5 <a href="#data-domain">Data Domains</a> which are:</p>
+<p>The top-level view of the GA supermodel that assumes Level 0 background mechanics shows a set of 5 <a href="#data-domain">Data Domains</a> which are:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/data-cataloguing:">Data Cataloguing</a></p>
+<p><a href="#_data_cataloguing_domain">Data Cataloguing</a></p>
 </li>
 <li>
-<p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/organisations-people:">Organisations &amp; People</a></p>
+<p><a href="#_organisations_people_domain">Organisations &amp; People</a></p>
 </li>
 <li>
-<p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/spatiality:">Spatiality</a></p>
+<p><a href="#_theming_domain">Theming</a></p>
 </li>
 <li>
-<p><a href="http://pid.geoscience.gov.au/def/sm/data-domains/theming:">Theming</a></p>
+<p><a href="#_sampling_observations_domain">Sampling &amp; Observations</a></p>
+</li>
+<li>
+<p><a href="#Spatial Domain">Spatial</a></p>
 </li>
 </ol>
 </div>
@@ -889,7 +925,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figure 5. Top-level view of the Supermodel showing Data Domains</div>
 </div>
 <div class="paragraph">
-<p>These Data Domains are defined formally in a simple SKOS vocabulary within this model&#8217;s set of machine-readable resources. The vocabulary may be access ddirectly at <a href="http://pid.geoscience.gov.au/def/sm/data-domains" class="bare">http://pid.geoscience.gov.au/def/sm/data-domains</a>.</p>
+<p>These Data Domains are defined formally in a simple SKOS vocabulary within this model&#8217;s set of machine-readable resources. The vocabulary may be access ddirectly at <a href="https://linked.data.gov.au/def/supermodel/data-domains" class="bare">https://linked.data.gov.au/def/supermodel/data-domains</a>.</p>
 </div>
 <div class="paragraph">
 <p>Elements at all other levels of detail in this model are classified according to these Data Domains by use of the <code>dcat:theme</code> property, for example, the class <code>sosa:Sample</code> is within the <em>Sampling</em> Data Domain, so it is defined as follows:</p>
@@ -945,18 +981,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data Catalog Vocabulary <a href="#DCAT">[DCAT]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sampling</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sosa:Sample</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A Sample is the result from an act of Sampling.</p>
-<p class="tableblock">Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</p>
-<p class="tableblock">Physical samples are sometimes known as 'specimens'.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sensor, Observation, Sample, and Actuator Ontology, within <a href="#SSN">[SSN]</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spatiality</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geo:Feature</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A discrete spatial phenomenon in a universe of discourse</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GeoSPARQL Ontology <a href="#GEO">[GEO]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Organisations &amp; People</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prov:Agent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&#8217;s activity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PROV-O: The PROV Ontology <a href="#PROV">[PROV]</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Theming</p></td>
@@ -965,10 +993,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Simple Knowledge Organization System ontology <a href="#SKOS">[SKOS]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organisations &amp; People</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prov:Agent</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&#8217;s activity</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PROV-O: The PROV Ontology <a href="#PROV">[PROV]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observation &amp; Sampling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sosa:Sample</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Sample is the result from an act of Sampling.</p>
+<p class="tableblock">Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</p>
+<p class="tableblock">Physical samples are sometimes known as 'specimens'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sensor, Observation, Sample, and Actuator Ontology, within <a href="#SSN">[SSN]</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geo:Feature</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A discrete spatial phenomenon in a universe of discourse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GeoSPARQL Ontology <a href="#GEO">[GEO]</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -996,26 +1032,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data Catalog Vocabulary <a href="#DCAT">[DCAT]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sampling</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sosa:Sample</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A Sample is the result from an act of Sampling.</p>
 <p class="tableblock">Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</p>
 <p class="tableblock">Physical samples are sometimes known as 'specimens'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sensor, Observation, Sample, and Actuator Ontology, within <a href="#SSN">[SSN]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sensor, Observation, Sample, and Actuator Ontology, within <a href="#SSN">[SSN]</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>geo:Feature</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A discrete spatial phenomenon in a universe of discourse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GeoSPARQL Ontology <a href="#GEO">[GEO]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GeoSPARQL Ontology <a href="#GEO">[GEO]</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>skos:Concept</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An idea or notion; a unit of thought</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple Knowledge Organization System ontology <a href="#SKOS">[SKOS]</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Simple Knowledge Organization System ontology <a href="#SKOS">[SKOS]</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>prov:Agent</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&#8217;s activity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PROV-O: The PROV Ontology <a href="#PROV">[PROV]</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1059,25 +1095,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_spatiality">4.4.3. Spatiality</h4>
-<div class="paragraph">
-<p>This subsection details the main elements of the Spatiality Data Domain.</p>
-</div>
-<div id="fig-domain-classes-spatiality" class="imageblock">
-<div class="content">
-<img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-spatiality.png" alt="domain classes spatiality">
-</div>
-<div class="title">Figure 9. Domain Main Classes for Spatiality</div>
-</div>
-<div class="paragraph">
-<p>This Data Domain&#8217;s main classes are taken directly from GeoSPARQL 1.1 <a href="#GEO">[GEO]</a> which is used extensively for Semantic Web spatial data already. GeoSPARQL&#8217;s main purposes are to relate things (<code>geo:Feature</code>) to their spatial projections - their geometries - and to relate things to one another - topological relations between features, such as <em>within</em>, <em>touches</em>, <em>disjoint</em> etc.</p>
-</div>
-<div class="paragraph">
-<p>Particular datasets tend to implement specialised types of things (usually referred to as <em>Feature Types</em>) and sometimes specialised relations between things, e.g. special <em>hydrological catchment</em> feature type might relate to another by being <em>upstream</em> of it. This is as per modelling in the Geofabric footnot:[<a href="https://linked.data.gov.au/dataset/geofabric" class="bare">https://linked.data.gov.au/dataset/geofabric</a>].</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_theming">4.4.4. Theming</h4>
+<h4 id="_theming">4.4.3. Theming</h4>
 <div class="paragraph">
 <p>This subsection details the main elements of the Theming Data Domain.</p>
 </div>
@@ -1085,10 +1103,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-theming.png" alt="domain classes theming">
 </div>
-<div class="title">Figure 10. Domain Main Classes for Theming</div>
+<div class="title">Figure 9. Domain Main Classes for Theming</div>
 </div>
 <div class="paragraph">
 <p>This Data Domain&#8217;s main classes are taken from <a href="#SKOS">[SKOS]</a> and their expected/required properties and relations are formally defined in <em>VocPub</em>, a "vocabulary publication profile of SKOS" <a href="#VOCPUB">[VOCPUB]</a>. VocPub just mandates certain vocabulary metadata and relations between elements in vocabularies. Conformance of vocabularies to VocPub is also easily testable using the profile&#8217;s validator and online tooling that support it <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sampling_observation">4.4.4. Sampling &amp; Observation</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_spatial">4.4.5. Spatial</h4>
+<div class="paragraph">
+<p>This subsection details the main elements of the Spatial Data Domain.</p>
+</div>
+<div id="fig-domain-classes-spatial" class="imageblock">
+<div class="content">
+<img src="https://surroundaustralia.github.io/loci-supermodel/img/domain-classes-spatial.png" alt="domain classes spatial">
+</div>
+<div class="title">Figure 10. Domain Main Classes for Spatial</div>
+</div>
+<div class="paragraph">
+<p>This Data Domain&#8217;s main classes are taken directly from GeoSPARQL 1.1 <a href="#GEO">[GEO]</a> which is used extensively for Semantic Web spatial data already. GeoSPARQL&#8217;s main purposes are to relate things (<code>geo:Feature</code>) to their spatial projections - their geometries - and to relate things to one another - topological relations between features, such as <em>within</em>, <em>touches</em>, <em>disjoint</em> etc.</p>
+</div>
+<div class="paragraph">
+<p>Particular datasets tend to implement specialised types of things (usually referred to as <em>Feature Types</em>) and sometimes specialised relations between things, e.g. special <em>hydrological catchment</em> feature type might relate to another by being <em>upstream</em> of it. This is as per modelling in the Geofabric <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>.</p>
 </div>
 </div>
 </div>
@@ -1098,27 +1138,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_data_domain_details">5. Data Domain Details</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Data Domains described above are implemented using a number of resources. The following subsections link to these resources.</p>
+<p>The Data Domains described above are implemented using multiple models and other resources. The following subsections describe the Domains' details and link to all their resources.</p>
 </div>
 <div class="sect2">
-<h3 id="_data_cataloguing_details">5.1. Data Cataloguing Details</h3>
-
+<h3 id="_data_cataloguing_domain">5.1. Data Cataloguing Domain</h3>
+<div class="paragraph">
+<p>This model is based on the <em>Data Catalog Vocabulary</em> <a href="#DCAT">[DCAT]</a> and <em>The Provenance Ontology</em> <a href="#PROV">[PROV]</a> with extensions to cater for mappings to FAIR <a href="#FAIR">[FAIR]</a> and CARE <a href="#CARE">[CARE]</a> models. The essential model is shown in <a href="#datacataloguing-model">Figure 8</a>.</p>
+</div>
+<div id="datacataloguing-model" class="imageblock">
+<div class="content">
+<img src="https://surroundaustralia.github.io/loci-supermodel/img/details-data-cataloguing.png" alt="details data cataloguing">
+</div>
+<div class="title">Figure 11. Data Cataloguing Model, based on DCAT &amp; PROV</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_organisations_people_details">5.2. Organisations &amp; People Details</h3>
-
+<h3 id="_organisations_people_domain">5.2. Organisations &amp; People Domain</h3>
+<div class="paragraph">
+<p>This domain is essentially the organization modelling element of <a href="https://schema.org">schema.org</a> with a few additional properties to track some aspects of organisations relevant to data governance. The essential model is shown in <a href="#org-model">Figure 10</a>.</p>
+</div>
+<div id="org-model" class="imageblock">
+<div class="content">
+<img src="https://surroundaustralia.github.io/loci-supermodel/img/details-organisations-people.png" alt="details organisations people">
+</div>
+<div class="title">Figure 12. Organisation Model, based on schema.org</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_sampling_details">5.3. Sampling Details</h3>
-
+<h3 id="_theming_domain">5.3. Theming Domain</h3>
+<div class="paragraph">
+<p><em>still to come</em></p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_spatiality_details">5.4. Spatiality Details</h3>
-
+<h3 id="_sampling_observations_domain">5.4. Sampling &amp; Observations Domain</h3>
+<div class="paragraph">
+<p>This domain is essentially the Data Cube Vocabulary <a href="#DQ">[DQ]</a>'s core elements with dataset metadata replaced with elements from DCAT <a href="#DCAT">[DCAT]</a>. The essential model is shown in <a href="#obs-model">Figure 9</a>.</p>
+</div>
+<div id="obs-model" class="imageblock">
+<div class="content">
+<img src="https://surroundaustralia.github.io/loci-supermodel/img/details-observations-sampling.png" alt="details observations sampling">
+</div>
+<div class="title">Figure 13. Observations Model, based on <a href="https://www.w3.org/TR/vocab-data-cube/#fig-pictorial-summary-of-key-terms-and-their-relationship">Data Cube Vocabulary overview</a></div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_theming_details">5.5. Theming Details</h3>
-
+<h3 id="_spatiality_domain">5.5. Spatiality Domain</h3>
+<div class="paragraph">
+<p>The Spatiality domain is the promary concern of the Loc-I Project since the project aims to provide an integration mthdology, models and an integrated and estensible "spine" of major national spatial datasets.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1188,10 +1256,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. The validator itself is online at <a href="https://w3id.org/profile/vocpub/validator" class="bare">https://w3id.org/profile/vocpub/validator</a> and is pre-loaded into several online validation tools, for example Geoscience Australia&#8217;s vocabulary servers e.g. <a href="https://vocabs.ga.gov.au" class="bare">https://vocabs.ga.gov.au</a>. It can also be selected for online validation use at <a href="https://rdftools.surroundaustralia.com" class="bare">https://rdftools.surroundaustralia.com</a>
 </div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://linked.data.gov.au/dataset/geofabric" class="bare">https://linked.data.gov.au/dataset/geofabric</a>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-03-02 23:55:53 UTC
+Last updated 2022-03-30 01:28:09 UTC
 </div>
 </div>
 </body>
